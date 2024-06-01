@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <title>Quran App</title>
+  </head>
+  <body>
+    <!-- Header Start -->
+    <header class="header relative bg-[#F3EAD7]">
+      <div
+        class="main-header container mx-auto p-3 lg:px-8 xl:px-32 flex items-center justify-between"
+      >
+        <div class="main-logo">
+          <a href="#">
+            <img src="ASSETS/logo.svg" alt="Quran-House" />
+          </a>
+        </div>
+        <button
+          id="menu-toggle"
+          class="lg:hidden p-2 rounded-md focus:outline-none"
+        >
+          <svg
+            id="menu-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#653B0C"
+            class="size-9"
+          >
+            <path
+              id="menu-icon-path"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
+            />
+          </svg>
+        </button>
+        <nav class="main-navbar hidden lg:flex w-full lg:w-auto mt-1">
+          <ul
+            class="main-navbar-list flex flex-row items-center gap-2 lg:gap-4"
+          >
+            <li>
+              <a
+                href="/"
+                class="xl:text-lg pr-3"
+                style="color: #653b0c; border-right: 2px solid #653b0c"
+                >Quran</a
+              >
+            </li>
+            <li>
+              <a
+                href="/online-classes"
+                class="xl:text-lg pr-3"
+                style="color: #653b0c; border-right: 2px solid #653b0c"
+                >Online Quran Classes</a
+              >
+            </li>
+            <li>
+              <a
+                href="/courses"
+                class="xl:text-lg pr-3"
+                style="color: #653b0c; border-right: 2px solid #653b0c"
+                >Courses</a
+              >
+            </li>
+            <li>
+              <a
+                href="/team"
+                class="xl:text-lg pr-3"
+                style="color: #653b0c; border-right: 2px solid #653b0c"
+                >Team</a
+              >
+            </li>
+            <li>
+              <a
+                href="/prices"
+                class="xl:text-lg pr-3"
+                style="color: #653b0c; border-right: 2px solid #653b0c"
+                >Prices</a
+              >
+            </li>
+            <li>
+              <a
+                href="/blog"
+                class="xl:text-lg pr-3"
+                style="color: #653b0c; border-right: 2px solid #653b0c"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="/trial-lesson"
+                class="xl:text-lg pr-3"
+                style="color: #653b0c; border-right: 2px solid #653b0c"
+                >Trial Lesson</a
+              >
+            </li>
+            <li>
+              <a href="/about-us" class="xl:text-xl pr-3" style="color: #653b0c"
+                >About us</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div
+        id="mobile-menu"
+        class="absolute top-[99%] left-0 w-full bg-[#F3EAD7] lg:hidden z-50 transition-transform duration-500 transform scale-y-0 origin-top"
+        style="transition-duration: 300ms"
+      >
+        <nav>
+          <ul class="main-navbar-list flex flex-col items-center gap-2">
+            <li class="w-full text-center">
+              <a
+                href="/"
+                class="text-xl block py-2"
+                style="color: #653b0c; border-bottom: 1px solid #653b0c"
+                >Quran</a
+              >
+            </li>
+            <li class="w-full text-center">
+              <a
+                href="/online-classes"
+                class="text-xl block py-2"
+                style="color: #653b0c; border-bottom: 1px solid #653b0c"
+                >Online Quran Classes</a
+              >
+            </li>
+            <li class="w-full text-center">
+              <a
+                href="/courses"
+                class="text-xl block py-2"
+                style="color: #653b0c; border-bottom: 1px solid #653b0c"
+                >Courses</a
+              >
+            </li>
+            <li class="w-full text-center">
+              <a
+                href="/team"
+                class="text-xl block py-2"
+                style="color: #653b0c; border-bottom: 1px solid #653b0c"
+                >Team</a
+              >
+            </li>
+            <li class="w-full text-center">
+              <a
+                href="/prices"
+                class="text-xl block py-2"
+                style="color: #653b0c; border-bottom: 1px solid #653b0c"
+                >Prices</a
+              >
+            </li>
+            <li class="w-full text-center">
+              <a
+                href="/blog"
+                class="text-xl block py-2"
+                style="color: #653b0c; border-bottom: 1px solid #653b0c"
+                >Blog</a
+              >
+            </li>
+            <li class="w-full text-center">
+              <a
+                href="/trial-lesson"
+                class="text-xl block py-2"
+                style="color: #653b0c; border-bottom: 1px solid #653b0c"
+                >Trial Lesson</a
+              >
+            </li>
+            <li class="w-full text-center">
+              <a
+                href="/about-us"
+                class="text-xl block py-2"
+                style="color: #653b0c"
+                >About us</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Header End -->
+    <!-- Section One Start (Landing) -->
+    <section
+      class="home bg-cover bg-right md:bg-center pt-2 md:pt-0 flex items-center md:block"
+      id="home"
+      style="
+        background-image: url('/ASSETS/SectionHome.svg');
+        height: calc(100vh - 74px);
+      "
+    >
+      <div class="container mx-auto p-3 lg:px-0 xl:px-32 h-full">
+        <div class="flex justify-center items-center h-full md:block md:pt-40">
+          <div class="home-content text-center md:text-start">
+            <h1
+              class="home-text-h1 font-bold text-white leading-tight text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+              style="text-shadow: 2px 2px 2px #6b6b6b"
+            >
+              <span
+                class="home-text-h1-span font-black text-5xl md:text-7xl lg:text-8xl xl:text-9xl"
+              >
+                Online
+              </span>
+              <br />
+              Quran Academy
+            </h1>
+            <p
+              class="home-text-p text-xl md:text-2xl lg:text-3xl xl:text-4xl font-black md:font-semibold pt-8 md:pt-4 lg:pt-2 text-white md:text-[#653B0C] mx-2 mb-8 mt-4"
+              style="text-shadow: 2px 2px 2px #6b6b6b"
+            >
+              Learn Quran And Arabic With <br />
+              The Best Online Tutors!
+            </p>
+            <div class="pt-8 md:pt-4 lg:pt-2">
+              <a
+                href="/"
+                class="text-xl md:text-2xl lg:text-3xl text-white bg-[#766CAD] px-5 py-3 rounded-full hover:bg-[#5b5196] transition-all duration-150"
+              >
+                Book Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section One End (Landing) -->
+    <!-- Section Two Start (Video) -->
+    <section
+      class="bg-cover bg-center bg-no-repeat"
+      style="background-image: url('/ASSETS/home-bg.png')"
+    >
+      <div class="container mx-auto p-3 lg:px-0 xl:px-32">
+        <h2
+          class="text-xl sm:text-3xl md:text-5xl font-bold text-center pt-4 pb-8 sm:pt-8 text-[#DC811C]"
+        >
+          Unleash Your Learning Potential <br />
+          Through Our Quran Academy
+        </h2>
+        <div class="home-video w-full flex justify-center">
+          <iframe
+            width="100%"
+            height="600"
+            src="https://www.youtube.com/embed/1JcyxMztr0w?si=VaAtc-P1oK1SWak8"
+            allowfullscreen
+            title="Embedded YouTube Video"
+          ></iframe>
+        </div>
+        <div>
+          <p
+            class="text-[#653B0C] text-lg sm:text-xl font-semibold text-center mt-7 mb-4"
+          >
+            Start your journey with us as a student to end up being a Teacher.
+            As Prophet Muhammad (PBUH) stated: “The best among you (Muslims) are
+            those who learn the Quran and teach it.” Stand out of the crowd and
+            have deep learning of Islam Quran House prepares an active Muslim
+            who understands all aspects of his religion’s needs. That’s why we
+            teach our students everything they need to be better practicing
+            Muslims. Such as Tafseer, Hadith, Aqeedah, Tazkiyah, and more.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Section Two End (Video) -->
+    <!-- Section Three Start -->
+    <section class="relative bg-[#fff7e7]">
+      <div class="relative container mx-auto p-3 lg:px-0 xl:px-32 z-10">
+        <div class="grid grid-cols-12 items-center">
+          <div class="col-span-12 lg:col-span-6">
+            <img
+              src="/ASSETS/home-teachers.png"
+              id="teachersImage"
+              alt="Teachers"
+              class="w-full h-auto"
+            />
+          </div>
+          <div class="col-span-12 lg:col-span-6">
+            <div>
+              <h2
+                class="text-3xl text-center lg:text-start sm:text-4xl md:text-5xl font-bold text-[#DC811C]"
+              >
+                Learn Quran And Arabic <br />
+                Online With Best Tutors
+              </h2>
+              <p class="text-lg sm:text-xl font-semibold text-[#653B0C] py-4">
+                Enlighten your heart with the word of Allah! Like every new
+                route you take in your life, you always need a guide that helps
+                you to reach your targeted destination. Quran House is the
+                finest online Quran teaching website to accompany you in your
+                Quran and Arabic learning journey. Learn Tajweed
+              </p>
+              <p class="text-lg sm:text-xl font-semibold text-[#653B0C]">
+                We teach you better Arabic to be able to recite the Quran with
+                Tajweed and memorize it perfectly. By the end, you’ll have the
+                potential to teach the Quran to other brothers and sisters and
+                get Ijazah!
+              </p>
+              <div class="mt-8 pb-4 text-center lg:text-start">
+                <a
+                  href="/"
+                  class="text-xl md:text-2xl lg:text-3xl text-white bg-[#766CAD] px-5 py-3 rounded-full hover:bg-[#5b5196] transition-all duration-150"
+                >
+                  Try Free Session
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Three End -->
+    <!-- Section Four Start -->
+    <section>
+      <div class="container mx-auto p-3 lg:px-32 xl:px-64">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-12 my-8 sm:my-16"
+        >
+          <div class="flex flex-col items-center">
+            <img id="calendarImg" alt="calendar" class="w-24 h-24" />
+            <h3 class="text-center mt-3 font-semibold">
+              Your Own <br />
+              Suitable Schedule
+            </h3>
+          </div>
+          <div class="flex flex-col items-center">
+            <img id="medalImg" alt="calendar" class="w-24 h-24" />
+            <h3 class="text-center mt-3 font-semibold">
+              Highly Qualified & <br />
+              Expert Tutors
+            </h3>
+          </div>
+          <div class="flex flex-col items-center">
+            <img id="risingImg" alt="calendar" class="w-24 h-24" />
+            <h3 class="text-center mt-3 font-semibold">Progress Tracking</h3>
+          </div>
+          <div class="flex flex-col items-center">
+            <img id="liveImg" alt="calendar" class="w-24 h-24" />
+            <h3 class="text-center mt-3 font-semibold">
+              One-On-One <br />
+              Live Sessions
+            </h3>
+          </div>
+          <div class="flex flex-col items-center">
+            <img id="systemImg" alt="calendar" class="w-24 h-24" />
+            <h3 class="text-center mt-3 font-semibold">
+              Classes <br />
+              Monitoring System
+            </h3>
+          </div>
+          <div class="flex flex-col items-center">
+            <img id="creditCardImg" alt="calendar" class="w-24 h-24" />
+            <h3 class="text-center mt-3 font-semibold">
+              Secure <br />
+              Payment Method
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Four End -->
+    <!-- Section Five Start -->
+    <section class="bg-[#FFE3CB]">
+      <div class="container mx-auto p-3 lg:px-0 xl:px-32 pt-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="md:pr-8 px-4 md:border-r md:border-r-black md:mb-5">
+            <h2 class="text-4xl font-bold text-[#DC811C]">
+              Are you an adult who wants to learn Quran, Arabic, and Islam?
+            </h2>
+            <p class="text-lg my-8">
+              Begin with Quran House a new chapter in your life! We present a
+              course for every level and objective.Define your goals and level
+              of proficiency, and you’ll find a tailored online course within
+              your hand Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <div class="mb-8">
+              <a
+                href="/"
+                class="text-xl md:text-2xl lg:text-3xl text-white bg-[#766CAD] px-5 py-3 rounded-full hover:bg-[#5b5196] transition-all duration-150"
+              >
+                Start Now!
+              </a>
+            </div>
+          </div>
+          <div class="px-4">
+            <h2 class="text-4xl font-bold text-[#DC811C]">
+              Are you a parent who wants to grow his kids on Islamic rulings?
+            </h2>
+            <p class="text-lg my-8">
+              Raise your children on the principles of our tolerant religion! We
+              know there shall come a time when the one who is patient with his
+              religion will be like holding onto a burning ember. We will keep
+              your kids in honest hands on solid ground.
+            </p>
+            <div class="mb-8">
+              <a
+                href="/"
+                class="text-xl md:text-2xl lg:text-3xl text-white bg-[#766CAD] px-5 py-3 rounded-full hover:bg-[#5b5196] transition-all duration-150"
+              >
+                Start Now!
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Five End -->
+    <!-- Section Six Start -->
+    <section class="border-b-2 border-t-2">
+      <div class="container mx-auto p-4 lg:px-8 xl:px-32 my-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="flex justify-center lg:col-span-4">
+            <img
+              src="/ASSETS/muslim.svg"
+              id="muslimImg"
+              alt="muslim"
+              class="w-full h-80 lg:h-96 object-cover"
+            />
+          </div>
+          <div class="flex flex-col items-center lg:items-start lg:col-span-8">
+            <h2
+              class="text-3xl sm:text-4xl md:text-5xl font-bold text-[#DC811C]"
+            >
+              An Online Quran Academy Website That Prepares Strong Muslims
+            </h2>
+            <p class="text-base sm:text-lg md:text-xl mt-5">
+              Our Quran, Arabic, and Islamic studies courses qualify you to
+              skilfully speak Arabic, recite the Quran, and live by Islamic
+              rulings with the aid of native experts. We teach you how to
+              memorize the Quran, and recite it with the correct tajweed.
+            </p>
+            <p class="text-base sm:text-lg md:text-xl mt-5">
+              Quran House is attentive to support you to fully understand Islam
+              correctly through Islamic studies courses, which include Hadith,
+              Aqeedah, Tafseer, Tazkiyah, and comparative religions courses.
+              Through our crash course, the real spirit of Islam will fill your
+              heart.
+            </p>
+            <div class="mt-8">
+              <a
+                href="/"
+                class="text-xl md:text-2xl text-white bg-[#DC811C] px-5 py-3 rounded-full hover:bg-[#be7623] transition-all duration-150"
+              >
+                Explore Our Courses
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Six End -->
+    <!-- Section Seven Start -->
+    <section class="border-b-2">
+      <div class="container mx-auto p-4 lg:px-8 xl:px-32 my-6">
+        <h2 class="text-center text-[#DC811C] text-5xl font-bold">
+          Best Online Quran Classes
+        </h2>
+        <p class="text-center mt-5 text-2xl" style="line-height: 1.5">
+          Expand Your Knowledge About Quran Through Our <br />
+          Exceptional Methods of Teaching
+        </p>
+        <div class="orange-card-container grid grid-cols-12 gap-6 my-8">
+          <div class="col-span-12 md:col-span-6 lg:col-span-4">
+            <div
+              class="orange-card flex flex-col items-center text-center bg-[#EF954B] p-6 shadow-md"
+            >
+              <div class="card-content">
+                <h3 class="card-title text-2xl font-semibold text-white">
+                  Online Quran Classes For Kids
+                </h3>
+                <p class="card-description text-lg my-5">
+                  Online Quran classes for kids Constructed to Be the Best Guide
+                  for kids. Online Quran Classes For Kids – Begin Learning Quran
+                  With the Help of Professional Al-Azhar Tutors.
+                </p>
+                <div class="mt-6 mb-4 text-center">
+                  <a
+                    href="/"
+                    class="text-xl md:text-2xl text-white bg-[#766CAD] px-5 py-3 rounded-full hover:bg-[#FECF86] hover:text-[#3d3567] transition-all duration-500"
+                  >
+                    Try Free Session
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 md:col-span-6 lg:col-span-4">
+            <div
+              class="orange-card flex flex-col items-center text-center bg-[#EF954B] p-6 shadow-md"
+            >
+              <div class="card-content">
+                <h3 class="card-title text-2xl font-semibold text-white">
+                  Online Quran Ijazah Course
+                </h3>
+                <p class="card-description text-xl my-5">
+                  After Ijazah Course, Students Will Correctly Recite the Full
+                  Quran From Mushaf and by heart. A new phase of your Quranic
+                  journey is about to begin.
+                </p>
+                <div class="mt-6 mb-4 text-center">
+                  <a
+                    href="/"
+                    class="text-xl md:text-2xl text-white bg-[#766CAD] px-5 py-3 rounded-full hover:bg-[#FECF86] hover:text-[#3d3567] transition-all duration-500"
+                  >
+                    Try Free Session
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 md:col-span-6 lg:col-span-4">
+            <div
+              class="orange-card flex flex-col items-center text-center bg-[#EF954B] p-6 shadow-md"
+            >
+              <div class="card-content">
+                <h3 class="card-title text-2xl font-semibold text-white">
+                  Intensive Quran Course
+                </h3>
+                <p class="card-description text-lg my-5">
+                  Prophet Muhammad (PBUH) once said: “The one who is proficient
+                  in the recitation of the Quran will be with the honorable and
+                  obedient scribes (angels).
+                </p>
+                <div class="mt-6 mb-4 text-center">
+                  <a
+                    href="/"
+                    class="text-xl md:text-2xl text-white bg-[#766CAD] px-5 py-3 rounded-full hover:bg-[#FECF86] hover:text-[#3d3567] transition-all duration-500"
+                  >
+                    Try Free Session
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 md:col-span-6 lg:col-span-4">
+            <div
+              class="orange-card flex flex-col items-center text-center bg-[#EF954B] p-6 shadow-md"
+            >
+              <div class="card-content">
+                <h3 class="card-title text-2xl font-semibold text-white">
+                  Quran Tafseer Course
+                </h3>
+                <p class="card-description text-lg my-5">
+                  Muslims who recite Quran may find some verses difficult to
+                  understand, but the course aids both Arab and non-Arab
+                  students in better understanding Quran.
+                </p>
+                <div class="mt-6 mb-4 text-center">
+                  <a
+                    href="/"
+                    class="text-xl md:text-2xl text-white bg-[#766CAD] px-5 py-3 rounded-full hover:bg-[#FECF86] hover:text-[#3d3567] transition-all duration-500"
+                  >
+                    Try Free Session
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 md:col-span-6 lg:col-span-4">
+            <div
+              class="orange-card flex flex-col items-center text-center bg-[#EF954B] p-6 shadow-md"
+            >
+              <div class="card-content">
+                <h3 class="card-title text-2xl font-semibold text-white">
+                  Quran Memorization Course
+                </h3>
+                <p class="card-description text-xl my-5">
+                  Ready To Carry The Words Of Allah In Your Heart? The Manners
+                  Of Each Verse (Ayah) Who Learn To Memorize Quran.
+                </p>
+                <div class="mt-6 mb-4 text-center">
+                  <a
+                    href="/"
+                    class="text-xl md:text-2xl text-white bg-[#766CAD] px-5 py-3 rounded-full hover:bg-[#FECF86] hover:text-[#3d3567] transition-all duration-500"
+                  >
+                    Try Free Session
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 md:col-span-6 lg:col-span-4">
+            <div
+              class="orange-card flex flex-col items-center text-center bg-[#EF954B] p-6 shadow-md"
+            >
+              <div class="card-content">
+                <h3 class="card-title text-2xl font-semibold text-white">
+                  Online Quranic Arabic Course
+                </h3>
+                <p class="card-description text-lg my-5">
+                  The Quranic Arabic language is necessary to learn in order to
+                  be able to read the Quran, and have a deeper understanding of
+                  it.
+                </p>
+                <div class="mt-6 mb-4 text-center">
+                  <a
+                    href="/"
+                    class="text-xl md:text-2xl text-white bg-[#766CAD] px-5 py-3 rounded-full hover:bg-[#FECF86] hover:text-[#3d3567] transition-all duration-500"
+                  >
+                    Try Free Session
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Seven End  -->
+    <!-- Section Eight Start  -->
+    <section class="border-b-2">
+      <div class="container mx-auto p-4 lg:px-8 xl:px-32 my-6">
+        <h2 class="text-center text-[#DC811C] text-5xl font-bold">
+          Best Arabic Online Courses
+        </h2>
+        <p class="text-center mt-5 text-2xl" style="line-height: 1.5">
+          Expand Your Knowledge About Arabic Through <br />
+          Our Exceptional Methods of Teaching
+        </p>
+        <div class="orange-card-container grid grid-cols-12 gap-6 my-8">
+          <div class="col-span-12 md:col-span-6 lg:col-span-4">
+            <div
+              class="orange-card flex flex-col items-center text-center bg-[#EF954B] p-6 shadow-md"
+            >
+              <div class="card-content">
+                <h3 class="card-title text-2xl font-semibold text-white">
+                  Best Arabic Online Courses
+                </h3>
+                <p class="card-description text-lg my-5">
+                  Our Arab “Fushah” program is an insightful academic plan that
+                  lets you acquire all the Arabic tools to comprehend, write,
+                  read, and speak.
+                </p>
+                <div class="mt-6 mb-4 text-center">
+                  <a
+                    href="/"
+                    class="text-xl md:text-2xl text-white bg-[#766CAD] px-5 py-3 rounded-full hover:bg-[#FECF86] hover:text-[#3d3567] transition-all duration-500"
+                  >
+                    Try Free Session
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 md:col-span-6 lg:col-span-4">
+            <div
+              class="orange-card flex flex-col items-center text-center bg-[#EF954B] p-6 shadow-md"
+            >
+              <div class="card-content">
+                <h3 class="card-title text-2xl font-semibold text-white">
+                  Fusha Arabic Course
+                </h3>
+                <p class="card-description text-lg my-5">
+                  One can learn Modern Standard Arabic and Fusha Arabic online
+                  at Quran House in an integrated course that progresses from
+                  beginner to expert levels.
+                </p>
+                <div class="mt-6 mb-4 text-center">
+                  <a
+                    href="/"
+                    class="text-xl md:text-2xl text-white bg-[#766CAD] px-5 py-3 rounded-full hover:bg-[#FECF86] hover:text-[#3d3567] transition-all duration-500"
+                  >
+                    Try Free Session
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 md:col-span-6 lg:col-span-4">
+            <div
+              class="orange-card flex flex-col items-center text-center bg-[#EF954B] p-6 shadow-md"
+            >
+              <div class="card-content">
+                <h3 class="card-title text-2xl font-semibold text-white">
+                  Arabic Classes For Kids
+                </h3>
+                <p class="card-description text-lg my-5">
+                  This online Arabic class for kids is the primary course
+                  tailored for beginner students who nearly know nothing about
+                  this distinctive language.
+                </p>
+                <div class="mt-6 mb-4 text-center">
+                  <a
+                    href="/"
+                    class="text-xl md:text-2xl text-white bg-[#766CAD] px-5 py-3 rounded-full hover:bg-[#FECF86] hover:text-[#3d3567] transition-all duration-500"
+                  >
+                    Try Free Session
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Eight End  -->
+    <!-- Section Nine Start  -->
+    <section class="border-b-2">
+      <div class="container mx-auto p-4 lg:px-16 xl:px-32 my-6">
+        <h2
+          class="text-center text-[#766CAD] text-2xl sm:text-3xl md:text-5xl font-bold"
+          style="line-height: 1.3"
+        >
+          How Do Our Courses Work During a Month?
+        </h2>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-12 mb-4"
+        >
+          <div class="relative">
+            <div
+              class="blue-circle relative flex flex-col items-center justify-center text-center"
+            >
+              <div class="relative border-2 rounded-full p-8 border-[#766CAD]">
+                <img
+                  src="/ASSETS/praying.png"
+                  alt="blue-circle"
+                  style="width: 100px; height: 100px"
+                />
+                <img
+                  src="/ASSETS/blue-circle-border.svg"
+                  class="border-img absolute top-[-8px] left-[-8px]"
+                  alt="border"
+                />
+              </div>
+              <div>
+                <h3
+                  class="text-lg sm:text-xl text-[#766CAD] font-semibold mt-4"
+                >
+                  Take The Classes
+                </h3>
+              </div>
+            </div>
+            <div class="arrow-img absolute top-[85px] right-[-40px]">
+              <img src="ASSETS/Right-Arrow.svg" alt="arrow" />
+            </div>
+          </div>
+          <div class="relative">
+            <div
+              class="blue-circle relative flex flex-col items-center justify-center text-center"
+            >
+              <div class="relative border-2 rounded-full p-8 border-[#766CAD]">
+                <img
+                  src="ASSETS/homework.png"
+                  alt="blue-circle"
+                  style="width: 100px; height: 100px"
+                />
+                <img
+                  src="/ASSETS/blue-circle-border.svg"
+                  class="border-img absolute top-[-8px] left-[-8px]"
+                  alt="border"
+                />
+              </div>
+              <div>
+                <h3
+                  class="text-lg sm:text-xl text-[#766CAD] font-semibold mt-4"
+                >
+                  Study And Do The Assignments
+                </h3>
+              </div>
+            </div>
+            <div class="arrow-img absolute top-[85px] right-[-40px]">
+              <img src="ASSETS/Right-Arrow.svg" alt="arrow" />
+            </div>
+          </div>
+          <div class="relative">
+            <div
+              class="blue-circle relative flex flex-col items-center justify-center text-center"
+            >
+              <div class="relative border-2 rounded-full p-8 border-[#766CAD]">
+                <img
+                  src="ASSETS/feedback.png"
+                  alt="blue-circle"
+                  style="width: 100px; height: 100px"
+                />
+                <img
+                  src="/ASSETS/blue-circle-border.svg"
+                  class="border-img absolute top-[-8px] left-[-8px]"
+                  alt="border"
+                />
+              </div>
+              <div>
+                <h3
+                  class="text-lg sm:text-xl text-[#766CAD] font-semibold mt-4"
+                >
+                  Receive Our Feedback
+                </h3>
+              </div>
+            </div>
+            <div class="arrow-img absolute top-[85px] right-[-40px]">
+              <img src="ASSETS/Right-Arrow.svg" alt="arrow" />
+            </div>
+          </div>
+          <div class="relative">
+            <div
+              class="blue-circle relative flex flex-col items-center justify-center text-center"
+            >
+              <div class="relative border-2 rounded-full p-8 border-[#766CAD]">
+                <img
+                  src="/ASSETS/repeat.png"
+                  alt="blue-circle"
+                  style="width: 100px; height: 100px"
+                />
+                <img
+                  src="/ASSETS/blue-circle-border.svg"
+                  class="border-img absolute top-[-8px] left-[-8px]"
+                  alt="border"
+                />
+              </div>
+              <div>
+                <h3
+                  class="text-lg sm:text-xl text-[#766CAD] font-semibold mt-4"
+                >
+                  Repeat Again
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Nine End  -->
+    <!-- Section Ten Start  -->
+    <section class="border-b-2">
+      <div class="container mx-auto p-4 lg:px-16 xl:px-32 my-6">
+        <div
+          class="grid grid-cols-1 md:grid-cols-12 items-center gap-8 sm:gap-12 md:gap-16"
+        >
+          <div class="col-span-12 md:col-span-5 order-1 md:order-2">
+            <img
+              src="/ASSETS/Company-Profile.svg"
+              id="companyImg"
+              alt="Company-Profile"
+            />
+          </div>
+          <div class="col-span-12 md:col-span-7 order-2 md:order-1">
+            <h3
+              class="text-2xl text-center md:text-start sm:text-3xl md:text-5xl text-[#766CAD] font-bold"
+            >
+              Download & Read Quran House Company Profile
+            </h3>
+            <p class="text-lg sm:text-xl my-10 text-center md:text-start">
+              Below you will find the attached profile of Quran House and its
+              credentials. Download the PDF and enjoy reading.
+            </p>
+            <div class="my-4 text-center md:text-start">
+              <a
+                href="/"
+                class="text-xl md:text-2xl text-white bg-[#766CAD] px-5 py-3 rounded-full hover:bg-[#5b5196] transition-all duration-150"
+              >
+                Download PDF
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Ten End  -->
+    <!-- Section Eleven Start  -->
+    <section class="border-b-2">
+      <div class="container mx-auto p-4 lg:px-16 xl:px-32 my-6 mb-10">
+        <h3
+          class="text-2xl text-center sm:text-3xl md:text-5xl text-[#766CAD] font-bold mb-10"
+        >
+          Download & Read Quran House Company Profile
+        </h3>
+        <div class="grid grid-cols-12 gap-6">
+          <div class="col-span-12 md:col-span-6 lg:col-span-4">
+            <div
+              class="bg-[#766CAD] p-2 shadow h-[480px] flex flex-col items-center justify-center"
+            >
+              <div class="p-5 flex flex-col items-center justify-center">
+                <img src="ASSETS/img-card-1.svg" alt="Image-Card" />
+                <h2
+                  class="text-xl sm:text-2xl md:text-3xl font-semibold text-center mt-4 text-white"
+                >
+                  Set Your Suitable Schedule and We Will Do the Rest
+                </h2>
+                <div class="text-center mt-7 mb-2">
+                  <a
+                    href="/"
+                    class="bg-[#EF954B] px-16 py-3 text-xl rounded-full text-white hover:bg-[#dc8b49] transition-all duration-150"
+                    >Join Now</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 md:col-span-6 lg:col-span-4">
+            <div
+              class="bg-[#766CAD] p-2 shadow h-[480px] flex flex-col items-center justify-center"
+            >
+              <div class="p-5 flex flex-col items-center justify-center">
+                <img src="ASSETS/img-card-2.svg" alt="Image-Card" />
+                <h2
+                  class="text-xl sm:text-2xl md:text-3xl font-semibold text-center mt-4 text-white"
+                >
+                  Meet a Pool of Top-Tiers Professional Tutors
+                </h2>
+                <div class="text-center mt-7 mb-2">
+                  <a
+                    href="/"
+                    class="bg-[#EF954B] px-16 py-3 text-xl rounded-full text-white hover:bg-[#dc8b49] transition-all duration-150"
+                    >Join Now</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 md:col-span-6 lg:col-span-4">
+            <div
+              class="bg-[#766CAD] p-2 shadow h-[480px] flex flex-col items-center justify-center"
+            >
+              <div class="p-5 flex flex-col items-center justify-center">
+                <img src="/ASSETS//img-card-3.svg" alt="Image-Card" />
+                <h2
+                  class="text-xl sm:text-2xl md:text-3xl font-semibold text-center mt-4 text-white"
+                >
+                  Track Your Progress and Appreciate the Success
+                </h2>
+                <div class="text-center mt-7 mb-2">
+                  <a
+                    href="/"
+                    class="bg-[#EF954B] px-16 py-3 text-xl rounded-full text-white hover:bg-[#dc8b49] transition-all duration-150"
+                    >Join Now</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 md:col-span-6 lg:col-span-4">
+            <div
+              class="bg-[#766CAD] p-2 shadow h-[480px] flex flex-col items-center justify-center"
+            >
+              <div class="p-5 flex flex-col items-center justify-center">
+                <img src="ASSETS/img-card-4.svg" alt="Image-Card" />
+                <h2
+                  class="text-xl sm:text-2xl md:text-3xl font-semibold text-center mt-4 text-white"
+                >
+                  Enjoy Our 1:1 Live Sessions for Microlearning
+                </h2>
+                <div class="text-center mt-7 mb-2">
+                  <a
+                    href="/"
+                    class="bg-[#EF954B] px-16 py-3 text-xl rounded-full text-white hover:bg-[#dc8b49] transition-all duration-150"
+                    >Join Now</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 md:col-span-6 lg:col-span-4">
+            <div
+              class="bg-[#766CAD] p-2 shadow h-[480px] flex flex-col items-center justify-center"
+            >
+              <div class="p-5 flex flex-col items-center justify-center">
+                <img src="/ASSETS/img-card-5.svg" alt="Image-Card" />
+                <h2
+                  class="text-xl sm:text-2xl md:text-3xl font-semibold text-center mt-4 text-white"
+                >
+                  Well Engage via a Classes Monitoring System
+                </h2>
+                <div class="text-center mt-7 mb-2">
+                  <a
+                    href="/"
+                    class="bg-[#EF954B] px-16 py-3 text-xl rounded-full text-white hover:bg-[#dc8b49] transition-all duration-150"
+                    >Join Now</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 md:col-span-6 lg:col-span-4">
+            <div
+              class="bg-[#766CAD] p-2 shadow h-[480px] flex flex-col items-center justify-center"
+            >
+              <div class="p-5 flex flex-col items-center justify-center">
+                <img src="/ASSETS/img-card-6.svg" alt="Image-Card" />
+                <h2
+                  class="text-xl sm:text-2xl md:text-3xl font-semibold text-center mt-4 text-white"
+                >
+                  Feeling Safe With Every Payment You Will Making
+                </h2>
+                <div class="text-center mt-7 mb-2">
+                  <a
+                    href="/"
+                    class="bg-[#EF954B] px-16 py-3 text-xl rounded-full text-white hover:bg-[#dc8b49] transition-all duration-150"
+                    >Join Now</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Eleven End  -->
+    <!-- Section Twelve Start  -->
+    <section class="border-b-2">
+      <div class="container mx-auto p-4 lg:px-16 xl:px-32 my-6">
+        <h2
+          class="text-center text-2xl sm:text-3xl md:text-5xl font-bold text-[#EF954B]"
+        >
+          Your Top Seed Website To Learn <br />
+          Quran, Arabic, And Islam
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-28 mt-12">
+          <div class="flex flex-col justify-center items-center">
+            <img
+              src="ASSETS/teacher1.svg"
+              class="max-w-[310px]"
+              alt="Male Quran Tutor"
+            />
+            <h3
+              class="text-[#766CAD] text-xl sm:text-2xl md:text-4xl font-semibold text-center mt-5"
+            >
+              Best Online Male Quran Tutors
+            </h3>
+            <p class="text-lg sm:text-xl text-center mt-5">
+              All our tutors are authorized from an inveterate educational
+              establishment, which is Al-Azhar University with experiences that
+              lead them to the best practices in dealing with their students. We
+              carefully listen to students, easily adapt to their personalities,
+              and show the needed empathy and patience to collaborate with them
+              in every step.
+            </p>
+            <div class="mt-10">
+              <a
+                href="/"
+                class="text-xl md:text-2xl text-white bg-[#766CAD] px-5 py-3 rounded-full hover:bg-[#5b5196] transition-all duration-150"
+              >
+                Try Free Session
+              </a>
+            </div>
+          </div>
+          <div class="flex flex-col justify-center items-center">
+            <img
+              src="ASSETS/teacher2.svg"
+              class="max-w-[310px]"
+              alt="Female Quran Tutor"
+            />
+            <h3
+              class="text-[#766CAD] text-xl sm:text-2xl md:text-4xl font-semibold text-center mt-5"
+            >
+              Best Online Female Quran Tutors
+            </h3>
+            <p class="text-lg sm:text-xl text-center mt-5">
+              We have accredited female tutors with a certificate from the
+              prestigious Islamic University of Al-Azhar University. Our female
+              tutors are available for kids and sisters. They care about their
+              students, inspire them, & solve their learning problems. They are
+              warm-hearted mothers & older sisters for your kids, showing them
+              love and emotional intelligence.
+            </p>
+            <div class="mt-10">
+              <a
+                href="/"
+                class="text-xl md:text-2xl text-white bg-[#766CAD] px-5 py-3 rounded-full hover:bg-[#5b5196] transition-all duration-150"
+              >
+                Try Free Session
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Twelve End  -->
+    <!-- Section Thirteen Start  -->
+    <section class="border-b-2">
+      <div class="container mx-auto p-4 lg:px-16 xl:px-32 my-6">
+        <h2
+          class="text-center text-2xl sm:text-3xl md:text-5xl font-bold text-[#EF954B]"
+          style="line-height: 1.3"
+        >
+          Discover Everything <br />
+          About Quran In Our Blog
+        </h2>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-12 mb-5"
+        >
+          <div class="question-card shadow border">
+            <img
+              src="ASSETS/question-img.svg"
+              alt="Question-Image"
+              class="pt-1"
+            />
+            <h3 class="text-lg sm:text-xl text-[#DC811C] p-5">
+              Decoding Madd Lazim: Essential Guide to Tajweed’s Longest Madd
+            </h3>
+            <p class="text-xs px-5 text-gray-500">
+              What is Madd Arid Lissukun? Madd Arid Lissukun is a concept
+              derived from the Arabic language, integral to the proper
+              recitation of the Quran, known
+            </p>
+            <div class="py-1 border-b">
+              <a href="/" class="text-[#DC811C] text-sm px-5"> READ MORE » </a>
+            </div>
+            <div class="py-2">
+              <p class="text-sm text-gray-500 px-5">
+                27 December، 2023 No Comments
+              </p>
+            </div>
+          </div>
+          <div class="question-card shadow border">
+            <img
+              src="ASSETS/question-img.svg"
+              alt="Question-Image"
+              class="pt-1"
+            />
+            <h3 class="text-lg sm:text-xl text-[#DC811C] p-5">
+              Decoding Madd Lazim: Essential Guide to Tajweed’s Longest Madd
+            </h3>
+            <p class="text-xs px-5 text-gray-500">
+              What is Madd Arid Lissukun? Madd Arid Lissukun is a concept
+              derived from the Arabic language, integral to the proper
+              recitation of the Quran, known
+            </p>
+            <div class="py-1 border-b">
+              <a href="/" class="text-[#DC811C] text-sm px-5"> READ MORE » </a>
+            </div>
+            <div class="py-2">
+              <p class="text-sm text-gray-500 px-5">
+                27 December، 2023 No Comments
+              </p>
+            </div>
+          </div>
+          <div class="question-card shadow border">
+            <img
+              src="ASSETS/question-img.svg"
+              alt="Question-Image"
+              class="pt-1"
+            />
+            <h3 class="text-lg sm:text-xl text-[#DC811C] p-5">
+              Decoding Madd Lazim: Essential Guide to Tajweed’s Longest Madd
+            </h3>
+            <p class="text-xs px-5 text-gray-500">
+              What is Madd Arid Lissukun? Madd Arid Lissukun is a concept
+              derived from the Arabic language, integral to the proper
+              recitation of the Quran, known
+            </p>
+            <div class="py-1 border-b">
+              <a href="/" class="text-[#DC811C] text-sm px-5"> READ MORE » </a>
+            </div>
+            <div class="py-2">
+              <p class="text-sm text-gray-500 px-5">
+                27 December، 2023 No Comments
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Thirteen End  -->
+    <!-- Section Fourteen Start  -->
+    <section class="register bg-cover bg-center bg-no-repeat"">
+      <div class="container mx-auto p-4 lg:px-8 xl:px-32 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div class="flex flex-col items-center md:items-start">
+            <h2
+              class="text-[#ffa357] text-3xl sm:text-5xl font-bold text-center md:text-left"
+            >
+              Register Now!
+            </h2>
+            <p
+              class="text-lg sm:text-xl md:text-3xl mt-5 font-semibold text-white text-center md:text-left"
+            >
+              Try Two Free Trial Sessions
+            </p>
+            <div class="mt-5 md:mt-10">
+              <img src="ASSETS/register.png" alt="Register" />
+            </div>
+          </div>
+          <div>
+            <form
+              action="#"
+              class="flex flex-col gap-5 p-5 border-2 border-white rounded-md bg-[#766CAD]"
+            >
+              <input
+                type="text"
+                placeholder="Full Name"
+                class="outline-none px-4 py-3 rounded-md"
+              />
+              <input
+                type="number"
+                placeholder="WhatsApp"
+                class="outline-none px-4 py-3 rounded-md"
+              />
+              <div
+                id="countries-dropdown"
+                class="relative inline-block text-left"
+              ></div>
+              <input
+                type="email"
+                placeholder="Email (Optional)"
+                class="outline-none px-4 py-3 rounded-md"
+              />
+              <textarea
+                placeholder="Notes Or Comments"
+                class="outline-none p-4 resize-none h-24 rounded-md"
+              ></textarea>
+              <div
+                class="flex items-center space-x-2 bg-white rounded-md p-4 w-full md:w-64"
+              >
+                <input
+                  type="checkbox"
+                  class="form-checkbox h-5 w-5 text-blue-600 rounded"
+                />
+                <span class="text-gray-400">I'm Not a Robot</span>
+              </div>
+              <div>
+                <button
+                  type="submit"
+                  class="bg-[#EF954B] text-white w-full md:w-48 h-12 text-xl font-semibold rounded-md hover:bg-[#e58b41] transition-all duration-150"
+                >
+                  Register Now
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Fourteen End  -->
+    <!-- Footer Start -->
+    <footer class="bg-[#251F4D]">
+        <div class="container mx-auto p-4 lg:px-16 xl:px-32 py-6">
+            <div class="main-logo flex items-center gap-8">
+                <a href="/">
+                    <img src="ASSETS/logo.svg" alt="Quran-House" />
+                </a>
+                <div class="w-full bg-gray-500 md:h-[1px] mt-2"></div>
+            </div>
+            <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+                <div>
+                    <h2 class="text-lg sm:text-xl text-[#EF954B] font-semibold mb-4">Address</h2>
+                    <p class="text-white">71-75, Shelton Street, Covent Garden, London, WC2H 9JQ, UNITED KINGDOM</p>
+                    <p class="mt-4 text-[#EF954B] text-lg sm:text-xl font-semibold">Phone</p>
+                    <p class="text-white">+20 114 020 5770</p>
+                    <p class="mt-4 font-semibold text-[#EF954B]">Are You A Teacher? Interested In Working With Us?</p>
+                    <p class="text-white">Info@Quranhouse.Online</p>
+                </div>
+                <div>
+                    <h2 class="text-lg sm:text-xl text-[#EF954B] font-semibold mb-4">Get Involved</h2>
+                    <ul>
+                        <li class="mb-2"><a href="#" class="hover:underline text-white">Quran English Translation</a></li>
+                        <li class="mb-2"><a href="#" class="hover:underline text-white">Online Quran Classes</a></li>
+                        <li class="mb-2"><a href="#" class="hover:underline text-white">Courses</a></li>
+                        <li class="mb-2"><a href="#" class="hover:underline text-white">Online Quran Teachers</a></li>
+                        <li class="mb-2"><a href="#" class="hover:underline text-white">Prices</a></li>
+                        <li class="mb-2"><a href="#" class="hover:underline text-white">Trial Lesson</a></li>
+                        <li class="mb-2"><a href="#" class="hover:underline text-white">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-lg sm:text-xl text-[#EF954B] font-semibold mb-4">Courses</h2>
+                    <ul>
+                        <li class="mb-2"><a href="#" class="hover:underline text-white">Online Quran Classes – Learn Quran Online With Top Quran Teachers</a></li>
+                        <li class="mb-2"><a href="#" class="hover:underline text-white">Arabic Online Courses – Learning Arabic Online With Native Arabs</a></li>
+                        <li class="mb-2"><a href="#" class="hover:underline text-white">Online Islamic Studies Courses</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-lg sm:text-xl text-[#EF954B] font-semibold mb-4">Blog</h2>
+                    <ul>
+                        <li class="mb-2"><a href="#" class="hover:underline text-white">FAQ’s</a></li>
+                        <li class="mb-2"><a href="#" class="hover:underline text-white">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#" class="hover:underline text-white">Terms & Conditions Of Fee</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex items-center gap-2 mt-8">
+                <a href="/" class="w-7 h-7 bg-[#9F91F1] rounded flex items-center justify-center">
+                    <svg class="w-5 h-5 fill-current text-[#251F4D]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <a href="/" class="w-7 h-7 bg-[#9F91F1] rounded flex items-center justify-center">
+                    <svg class="w-5 h-5 fill-current text-[#251F4D]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <a href="/" class="w-7 h-7 bg-[#9F91F1] rounded flex items-center justify-center">
+                    <svg class="w-5 h-5 fill-current text-[#251F4D]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z" />
+                    </svg>
+                </a>
+                <a href="/" class="w-7 h-7 bg-[#9F91F1] rounded flex items-center justify-center">
+                    <svg class="w-5 h-5 fill-current text-[#251F4D]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M12.51 8.796v1.697a3.738 3.738 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483 1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.601 1.601 0 0 1 1.6 1.606Z" clip-rule="evenodd" />
+                        <path d="M7.2 8.809H4V19.5h3.2V8.809Z" />
+                    </svg>
+                </a>
+                <a href="/" class="w-7 h-7 bg-[#9F91F1] rounded flex items-center justify-center">
+                    <svg class="w-5 h-5 fill-current text-[#251F4D]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M21.7 8.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.839c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.839 4.225 4.225 0 0 0-.79 1.965 30.146 30.146 0 0 0-.2 3.206v1.5a30.12 30.12 0 0 0 .2 3.206c.094.712.364 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.151 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965 30.12 30.12 0 0 0 .2-3.206v-1.516a30.672 30.672 0 0 0-.202-3.206Zm-11.692 6.554v-5.62l5.4 2.819-5.4 2.801Z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="bg-[#100A32] text-[#766CAD] text-center p-3">
+            © 2024 Quran House. All rights reserved
+        </div>
+    </footer>
+    <!-- Footer End -->
+    <!-- Scroll To Top Btn -->
+    <button id="scrollToTopButton" class="fixed cursor-pointer flex z-50 items-center justify-center w-16 h-16 text-xl bottom-12 transition-all bg-orange-200 hover:bg-orange-300 rounded-full scroll-to-top hidden-button">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" class="size-8">
+            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 18.75 7.5-7.5 7.5 7.5" />
+            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 7.5-7.5 7.5 7.5" />
+        </svg>
+    </button>
+    <script src="JS/main.js"></script>
+  </body>
+</html>

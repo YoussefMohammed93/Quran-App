@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 12.5px;
+}
+::-webkit-scrollbar-track {
+  background: white;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 164, 89);
+}
+
+.main-logo img {
+  width: 180px;
+  height: 50px;
+  max-width: max-content;
+}
+
+.orange-card {
+  height: 300px;
+}
+
+.register {
+  background-image: url("/ASSETS/register-img.png");
+}
+
+.border-img {
+  width: 180px !important;
+  height: 180px !important;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+
+.scroll-to-top {
+  transition: right 0.3s, opacity 0.3s;
+}
+.hidden-button {
+  right: -4rem;
+  opacity: 0;
+}
+.visible-button {
+  right: 1rem;
+  opacity: 1;
+}
+
+@media (min-width: 1537px) {
+  .home-content {
+    padding-top: 3rem;
+  }
+}
+
+@media (max-width: 1286px) {
+  .orange-card {
+    height: 380px;
+  }
+  .arrow-img {
+    display: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  .home {
+    min-height: 95vh;
+  }
+  .home-content {
+    padding-top: 0;
+  }
+  .home-text-h1 {
+    font-size: 50px;
+  }
+  .home-text-h1-span {
+    font-size: 70px;
+  }
+  .home-text-p {
+    font-size: 22px;
+    text-shadow: 2px 2px 2px #6b6b6b;
+  }
+  .orange-card {
+    height: 350px;
+  }
+}
+
+@media (min-width: 767px) {
+  .home-text-p {
+    text-shadow: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .orange-card {
+    height: 280px;
+  }
+}
+
+@media (max-width: 540px) {
+  .home-video iframe {
+    height: 400px;
+  }
+  .orange-card {
+    height: 320px;
+  }
+}
+
+@media (max-width: 391px) {
+  .orange-card {
+    height: 350px;
+  }
+}
